@@ -4,15 +4,14 @@
 # CS30 
 # Ms.Cotcher
 """ This is the menu for a game where you are an adventurer trying to escape a 
-wasteland with a locked door, navigate through the biome with four movements, 
-encounter and defeat enemies, collect resources, and try to find the key to the 
-door"""
+wasteland, you can commit combat to potential enemies, collect potential materials,
+and try to navigate through this endless map"""
 
 # These variables set up the catagories for actions and the coordinate system
 x = 0
 y = 0
 general_action = ["explore", "combat"]
-explore = ["forward", "backward", "left", "right", "stop"]
+explore = ["forward", "backward", "left", "right", "collect", "stop"]
 combat = ["attack", "hide", "defend"]
 
 """ The while loop that makes sure the general menu is running constantly until 
@@ -29,14 +28,13 @@ while True:
     menu"""
     if cata_input.lower() == "explore":
         while True:
-            print("\nu can go either")
+            print("\nu can do either")
             for direction in explore:
                 print(direction)
             direction_input = input("which one do you choose?\n")
             
             # The coordinate system 
             if direction_input.lower() in explore:
-                print("\n" + direction_input.lower() + "!")
                 coord_change = direction_input.lower()
                 if coord_change == explore[0]:
                     y += 1
@@ -55,6 +53,8 @@ while True:
                     print("your x value increased by one, " +
                     "your coord now is " + str(x) + " ," + str(y))
                 elif direction_input.lower() == explore[4]:
+                    print(direction_input.lower() + "!")
+                elif direction_input.lower() == explore[5]:
                     print("going back to the main menu\n")
                     break
             else:    
