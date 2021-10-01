@@ -8,7 +8,7 @@ Date: Oct 1st, 2021
 
 Description: Deleted trailing whitespaces, readjusted line 6-9
 
-to fit into the79 character space limit, changed the multiline
+to fit into the 79 character space limit, changed the multiline
 
 indent to fit the requirements of PEP8
 
